@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.blue {
+    background: #48bcff;
+}
+.yellow {
+    background: #d2c13a;
+}
+.red {
+    background: #952C06;
+}
+.dark {
+    background: #040427;
+}
+.sky {
+    width: 100%;
+    height: 500px;
+    display: block;
+    position: relative;
+    z-index: -1;
+}
+.sky-animation {
+    animation: ani-sky 4s ease-in-out 2s forwards 1;
+}
+.sun {
+    background: #FFFF00;
+    height:  150px;
+    width: 150px;
+    position: absolute;
+    left: 1%;
+    display: block;
+    border-radius: 50%;
+    top: 100%;
+    z-index: -1;
+}
+.sun-animation {
+    animation: ani-sun 8s ease-in-out forwards 1;
+}
+
+.wrapper-landscape {
+    display: block;
+    position: absolute;
+    top: 300px;
+    width: 100%;
+    z-index: 0;
+}
+.img-area {
+    background-image: url('forest.png');
+    background-repeat: repeat-x;
+    background-size: contain;
+    height: 200px;
+}
+.content {
+    display: block;
+    position: absolute;
+    top: 480px;
+    height: 100vh;
+    width: 100%;
+    background: #000000;
+}
+
+@keyframes ani-sky {
+     0% {
+         background: #040427;
+     }
+     40% {
+        background: #952C06;
+     }
+     70% {
+         background: #d2c13a;
+     }
+     100% {
+         background: #48bcff;
+     }
+}
+
+@keyframes ani-sun {
+    0% {
+        top: 600px;
+    }
+    100% {
+        top: 10px;
+        position: sticky;
+    }
+}
